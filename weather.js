@@ -12,12 +12,14 @@ async function checkweather(city) {
     document.querySelector(".temp").innerHTML = Math.round(data.current.temp_c) + "°C";
     document.querySelector(".humidity").innerHTML = data.current.humidity + "%";
     document.querySelector(".Wind").innerHTML = data.current.wind_kph + "Km/hr";
-    document.querySelector(".weather-icon").innerHTML=data.current.condition.icon;
-  
+    document.querySelector(".weather-icon").innerHTML = data.current.condition.icon;
+ 
 
-    
-        
-    document.querySelector(".weather").style.display ="block"
+   
+
+
+
+    document.querySelector(".weather").style.display = "block"
 
 
 
@@ -26,4 +28,10 @@ async function checkweather(city) {
 searchbtn.addEventListener("click", () => {
     checkweather(searchbox.value);
 })
+
+searchbox.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        checkweather(searchbox.value);
+    }
+});
 
