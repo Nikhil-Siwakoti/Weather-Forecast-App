@@ -2,6 +2,24 @@ body{
     background: #222;
 }
 
+.heading{
+    color: aliceblue;
+    font-size: 1.4rem;
+    text-align: center;
+     margin: 0;
+     padding-bottom: 0px;
+     font-family: Arial, Helvetica, sans-serif;
+     cursor: pointer;
+     transition: 0.5s;
+
+}
+
+.heading:hover{
+    font-size: 1.45rem;
+    transform: scale(1.05);
+
+}
+
 .card{
     width: 80%;
     max-width: 500px;
